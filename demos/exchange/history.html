@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadaf Raqi | Rate History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="picture/image.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  <style>.portfolio-demo{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 5%;background:#1c2b41;color:#fff;font:14px/1.5 Arial,sans-serif;position:relative;z-index:20}.portfolio-demo a{color:#fff;text-decoration:underline;text-underline-offset:3px}.portfolio-demo span{color:#dae4ef}@media(max-width:600px){.portfolio-demo{align-items:flex-start;flex-direction:column;gap:6px}}</style></head>
+  <body><aside class="portfolio-demo"><a href="../../#work">← Ardalan Janpour · Portfolio</a><span>Interactive demo · Sample rates, not live market data</span></aside>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <img class="brand-logo" src="picture/image.png" alt="Hadaf Raqi logo" />
+          <div class="brand-text">
+            <strong>Hadaf Raqi</strong>
+            <span>Exchange shop in Dubai • Rate history</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Rates</a>
+          <a href="converter.html">Converter</a>
+          <a href="history.html">History</a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <h1>Rate history</h1>
+          <p>Track recent changes for key currencies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card history-wrap">
+        <div class="controls">
+          <div class="control">
+            <label for="currencySelect">Currency</label>
+            <select id="currencySelect"></select>
+          </div>
+          <div class="control">
+            <label for="rangeSelect">Range</label>
+            <select id="rangeSelect">
+              <option value="7">Last 7 days</option>
+              <option value="30">Last 30 days</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="status" class="notice"></div>
+
+        <div class="chart-box">
+          <canvas id="historyChart" height="140"></canvas>
+        </div>
+
+        <ul id="historyList" class="history-list"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">Historical trends for reference.</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/history.js"></script>
+  </body>
+</html>

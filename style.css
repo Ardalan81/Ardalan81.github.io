@@ -270,3 +270,5 @@ footer a { display: inline-flex; align-items: center; min-height: 2.75rem; }
 .nameplate h1 em { margin-left: .06em; }
 .hero .portrait-label > span:first-child { font-size: .75rem; }
 @media(max-width:700px) { .nameplate h1 em { margin-left: 0; } }
+
+.native-name{display:none!important}.demo-link{display:flex;justify-content:space-between;gap:1rem;padding:.875rem 1rem;border:1px solid #9fb0c4;background:#eef3f8;color:#233e60;font-size:.875rem;border-radius:3px;margin-bottom:.75rem;min-height:44px;align-items:center}.demo-link:hover{background:#dfe9f3}.project details+.demo-link{margin-top:1rem}

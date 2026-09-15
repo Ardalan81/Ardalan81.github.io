@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadaf Raqi | Rates Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="picture/image.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  <style>.portfolio-demo{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 5%;background:#1c2b41;color:#fff;font:14px/1.5 Arial,sans-serif;position:relative;z-index:20}.portfolio-demo a{color:#fff;text-decoration:underline;text-underline-offset:3px}.portfolio-demo span{color:#dae4ef}@media(max-width:600px){.portfolio-demo{align-items:flex-start;flex-direction:column;gap:6px}}</style></head>
+  <body><aside class="portfolio-demo"><a href="../../#work">← Ardalan Janpour · Portfolio</a><span>Interactive demo · Sample rates, not live market data</span></aside>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <img class="brand-logo" src="picture/image.png" alt="Hadaf Raqi logo" />
+          <div class="brand-text">
+            <strong>Hadaf Raqi</strong>
+            <span>Exchange shop in Dubai • Simple rates board</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Rates</a>
+          <a href="converter.html">Converter</a>
+          <a href="history.html">History</a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <h1>Dubai exchange rates</h1>
+          <p>Today’s board rates for major currencies. Search, sort, and save favorites.</p>
+          <div class="badges">
+            <span class="badge">Dubai exchange</span>
+            <span class="badge">Daily board</span>
+            <span class="badge">Favorites</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <div class="controls">
+          <div class="control">
+            <label for="searchInput">Search currency</label>
+            <input id="searchInput" type="text" placeholder="Type USD, EUR, INR..." />
+          </div>
+          <div class="control">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+              <option value="name">Name (A–Z)</option>
+              <option value="buy-high">Buy: High → Low</option>
+              <option value="buy-low">Buy: Low → High</option>
+              <option value="sell-high">Sell: High → Low</option>
+              <option value="sell-low">Sell: Low → High</option>
+            </select>
+          </div>
+          <div class="control">
+            <label>
+              <input id="favoritesOnly" type="checkbox" /> Show favorites only
+            </label>
+            <div class="small-note">Tap the star to save.</div>
+          </div>
+        </div>
+
+        <div id="status" class="notice"></div>
+        <div id="ratesList" class="rates-list" aria-live="polite"></div>
+        <p id="lastUpdated" class="status"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        Hadaf Raqi Exchange • Dubai
+      </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/rates.js"></script>
+  </body>
+</html>
