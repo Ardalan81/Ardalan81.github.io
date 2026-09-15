@@ -160,3 +160,113 @@ footer a { display: inline-flex; align-items: center; min-height: 2.75rem; }
   .project { break-inside: avoid; margin-bottom: 1rem; }
   .cloud-project .project-body { display: flex; }
 }
+
+/* Personal direction: an editorial identity shaped by software and operations. */
+.hero {
+  --text: #f0f2f5;
+  --muted: #bcc8d8;
+  --line: #43516a;
+  --accent: #bacadd;
+  color: var(--text);
+  background: #1c2b41;
+  padding-top: 1.5rem;
+}
+.hero canvas { opacity: .5; }
+.hero-top { color: #c1cddd; }
+.availability:before { background: #c4ddbf; }
+.nameplate {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.nameplate h1 {
+  font-size: clamp(3.5rem, 7.8vw, 7.75rem);
+  letter-spacing: -.065em;
+  line-height: 1.08;
+  margin: 0;
+  white-space: nowrap;
+}
+.nameplate h1 em { color: #c2cedd; }
+.native-name {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.125rem;
+  color: #c1cddd;
+  white-space: nowrap;
+  padding-bottom: .6rem;
+}
+.hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 8%; padding-block: 2.5rem; }
+.hero .intro { color: #c3d0e1; letter-spacing: .09em; margin-bottom: 1.25rem; }
+.hero h2.hero-statement {
+  font-size: clamp(2rem, 3.1vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+.hero-statement em { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; color: #e5c8a7; letter-spacing: -.03em; }
+.hero-description { max-width: 32rem; color: #c4cfde; font-size: 1rem; margin-bottom: .875rem; }
+.student-note { font-size: .8125rem; color: #bcc8d8; margin-bottom: 1.75rem; }
+.hero .button { background: #e5c8a7; color: #1e2b3e; }
+.hero .button:hover { background: #f1d8bb; }
+.hero .text-link { color: #e7edf4; }
+.hero .text-link:hover { color: #e5c8a7; }
+.hero .identity { max-width: 340px; justify-self: end; padding-top: 0; margin-right: 14px; }
+.hero .portrait-wrap { border-radius: 2px; box-shadow: 12px 12px 0 #32445e; }
+.hero .portrait { aspect-ratio: 1; filter: grayscale(.65) saturate(.7); }
+.hero .portrait-label { background: #16253b; padding: 12px 16px; }
+.hero .portrait-label > span:first-child { font-size: .6875rem; letter-spacing: .06em; }
+.identity-note { display: flex; justify-content: space-between; gap: 1rem; color: #c1cddd; padding-top: 1.5rem; }
+.identity-coordinate { color: #c1cddd; font-size: .75rem; text-align: right; letter-spacing: .07em; }
+.hero-bottom { padding-block: 1.25rem; color: #c1cddd; }
+.hero-bottom a { color: #e5edf5; }
+.hero-bottom > a:last-child { color: #e5c8a7; }
+.career-route { display: inline-flex; gap: 1.5rem; align-items: center; }
+.career-route span { font-size: 1rem; letter-spacing: -.02em; }
+.career-route i { font-style: normal; color: #e5c8a7; }
+.at-a-glance { border-top: 0; }
+.glance-number { font-family: Georgia, serif; font-style: italic; font-size: 1.5rem; line-height: 1; color: #536b87; }
+.project { border-radius: 2px; }
+.project-top b { font-family: Georgia, serif; font-size: 1rem; font-style: italic; color: #4f6681; }
+.featured-project { border-top: 3px solid #9b7652 !important; }
+.featured-preview { background: #e5e9ed; }
+.section-heading h2 em, .foundation h2 em { font-family: Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: -.035em; }
+.story .section-heading h2 em { color: #e5c8a7; }
+.story .journey { padding-block: 1.5rem; border-block: 1px solid #53637b; }
+.contact h2 { max-width: 18ch; }
+.contact h2 em { font-family: Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: -.035em; }
+@media(max-width:1100px) {
+  .native-name { font-size: .9375rem; }
+  .nameplate h1 { font-size: 7.7vw; }
+  .hero .identity { max-width: 300px; }
+  .hero .intro { max-width: 31rem; line-height: 1.7; }
+}
+@media(max-width:700px) {
+  .hero { padding-top: 1.25rem; }
+  .nameplate { align-items: flex-start; padding-block: 1.5rem; gap: 1rem; }
+  .nameplate h1 { font-size: clamp(2.75rem, 11vw, 4.5rem); white-space: normal; }
+  .nameplate h1 em { display: block; }
+  .native-name { writing-mode: vertical-rl; font-size: .875rem; padding: .5rem 0 0; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; gap: 2rem; }
+  .hero h2.hero-statement { font-size: clamp(1.875rem, 7vw, 2.5rem); }
+  .hero .intro { font-size: .75rem; letter-spacing: .04em; }
+  .hero .identity { justify-self: center; width: 82%; max-width: 330px; margin-right: 12px; }
+  .hero .portrait-label > span:first-child { font-size: .6875rem; }
+  .hero-bottom { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .career-route { justify-content: space-between; gap: .75rem; }
+  .hero-bottom > a:last-child { padding-top: .75rem; border-top: 1px solid #43516a; }
+  .identity-note { font-size: .8125rem; }
+  .at-a-glance .glance-number { padding-top: .125rem; font-size: 1.25rem; }
+  .story .journey { padding-block: 1.25rem; }
+}
+@media print {
+  .hero { background: white; color: #111; --text: #111; --accent: #333; --muted: #333; }
+  .hero h1 em, .hero h2 em, .hero .intro, .hero-description, .student-note, .native-name { color: #333; }
+}
+.nameplate h1 { letter-spacing: -.055em; }
+.nameplate h1 em { margin-left: .06em; }
+.hero .portrait-label > span:first-child { font-size: .75rem; }
+@media(max-width:700px) { .nameplate h1 em { margin-left: 0; } }
