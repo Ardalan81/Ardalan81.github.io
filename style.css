@@ -272,3 +272,82 @@ footer a { display: inline-flex; align-items: center; min-height: 2.75rem; }
 @media(max-width:700px) { .nameplate h1 em { margin-left: 0; } }
 
 .native-name{display:none!important}.demo-link{display:flex;justify-content:space-between;gap:1rem;padding:.875rem 1rem;border:1px solid #9fb0c4;background:#eef3f8;color:#233e60;font-size:.875rem;border-radius:3px;margin-bottom:.75rem;min-height:44px;align-items:center}.demo-link:hover{background:#dfe9f3}.project details+.demo-link{margin-top:1rem}
+
+/* Phone layout: compact identity, readable cards, and comfortable touch targets. */
+.mobile-portrait { display: none; }
+@media (max-width: 700px) {
+  html { scroll-padding-top: 80px; }
+  header { height: 68px; padding-inline: 20px; gap: 12px; }
+  header .logo { font-size: 29px; }
+  header nav { gap: 14px; }
+  header .resume { padding: 7px 9px; white-space: nowrap; }
+  .hero { padding: 20px 20px 0; }
+  .hero-top { font-size: 11px; }
+  .nameplate { align-items: center; gap: 16px; padding-block: 22px; }
+  .nameplate h1 { font-size: clamp(36px, 10.7vw, 64px); line-height: 1.06; letter-spacing: -.055em; }
+  .mobile-portrait { display: block; flex: 0 0 auto; width: clamp(88px, 26vw, 140px); height: auto; aspect-ratio: .9; object-fit: cover; border-radius: 4px; box-shadow: 5px 5px 0 #32445e; filter: saturate(.65); }
+  .hero .identity { display: none; }
+  .hero-grid { padding-block: 24px; }
+  .hero .intro { font-size: 10px; line-height: 1.65; letter-spacing: .06em; margin-bottom: 16px; max-width: 32ch; }
+  .hero h2.hero-statement { font-size: clamp(27px, 7.2vw, 38px); line-height: 1.2; margin-bottom: 18px; text-wrap: initial; }
+  .hero-description { font-size: 15px; line-height: 1.7; margin-bottom: 14px; }
+  .student-note { font-size: 12px; line-height: 1.6; margin-bottom: 22px; max-width: 36ch; }
+  .hero-actions { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+  .hero-actions .button { justify-content: space-between; padding: 13px 14px; gap: 12px; font-size: 13px; }
+  .hero-actions .text-link { font-size: 12px; text-underline-offset: 5px; }
+  .hero-bottom { gap: 12px; padding-block: 18px; }
+  .hero-bottom .route-label { font-size: 10px; letter-spacing: .08em; }
+  .hero-bottom > a:last-child { display: none; }
+  .career-route span { font-size: 14px; }
+  .section { padding: 48px 20px; }
+  .section-heading { gap: 16px; margin-bottom: 26px; }
+  .kicker { font-size: 10px; line-height: 1.7; letter-spacing: .12em; margin-bottom: 16px; }
+  .section-heading h2, .foundation h2 { font-size: clamp(32px, 8.5vw, 44px); line-height: 1.15; }
+  .section-heading > p { font-size: 15px; line-height: 1.7; }
+  .at-a-glance { padding: 4px 20px; }
+  .at-a-glance > div, .at-a-glance > div + div { padding-block: 20px; column-gap: 10px; }
+  .at-a-glance p { font-size: 14px; }
+  .projects { gap: 20px; }
+  .project { border-radius: 8px; }
+  .project-body, .featured-project .project-body { padding: 22px 20px; }
+  .project-top { margin-bottom: 16px; gap: 12px; font-size: 10px; }
+  .project h3 { font-size: 25px; line-height: 1.25; margin-bottom: 14px; }
+  .project p { font-size: 15px; line-height: 1.7; }
+  .project .project-role, .detail p { font-size: 13px; }
+  .project-flow { gap: 6px; padding-block: 12px; margin-bottom: 18px; }
+  .project-flow span { font-size: 11px; }
+  .tags { gap: 6px; }
+  .tags span { font-size: 11px; padding: 4px 8px; }
+  .project details { margin-top: 18px; }
+  .featured-preview { padding: 14px; max-height: none; }
+  .featured-preview img { aspect-ratio: 1.6; object-fit: cover; object-position: top; }
+  .preview-browser { padding: 9px 10px; font-size: 10px; gap: 8px; }
+  .repository-preview img { aspect-ratio: 1.8; }
+  .repository-preview figcaption { padding: 10px 20px; font-size: 10px; }
+  .live-label { font-size: 10px; padding: 4px 7px; }
+  .journey { font-size: clamp(20px, 5.5vw, 30px); letter-spacing: -.04em; }
+  .journey i { margin-inline: 12px; }
+  .story-intro h3 { font-size: 25px; }
+  .story-intro p, .timeline p, .skills p { font-size: 15px; line-height: 1.75; }
+  .timeline h3 { font-size: 20px; }
+  .timeline article > span { font-size: 10px; }
+  .education { margin-top: 24px; padding-left: 18px; }
+  .education h3 { font-size: 23px; }
+  .research-note { padding-block: 28px; }
+  .contact h2 { font-size: clamp(34px, 9vw, 48px); }
+  .contact-bottom { margin-top: 24px; }
+  footer { padding: 22px 20px; }
+}
+@media (max-width: 360px) {
+  header { padding-inline: 16px; gap: 10px; }
+  header nav { gap: 10px; }
+  .nav-count { display: none; }
+  .hero-actions { grid-template-columns: 1fr; gap: 8px; }
+  .hero-actions .text-link { justify-self: start; }
+  .project-top { flex-wrap: wrap; }
+  .project-top > span { text-align: left; }
+}
+
+/* Reserve preview space before lazy images finish loading. */
+.featured-preview img { aspect-ratio: 1.44; object-fit: cover; object-position: top; }
+@media(max-width:700px) { .featured-preview img { aspect-ratio: 1.6; flex-shrink: 0; } }
